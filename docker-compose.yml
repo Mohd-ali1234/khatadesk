@@ -1,0 +1,17 @@
+# MySQL for KhataDesk:  docker compose up -d db
+services:
+  db:
+    image: mysql:8.4
+    restart: unless-stopped
+    environment:
+      MYSQL_DATABASE: khata
+      MYSQL_USER: khata
+      MYSQL_PASSWORD: khata
+      MYSQL_ROOT_PASSWORD: change-me
+    command: ["--character-set-server=utf8mb4", "--collation-server=utf8mb4_unicode_ci"]
+    ports:
+      - "3306:3306"
+    volumes:
+      - khata-data:/var/lib/mysql
+volumes:
+  khata-data:

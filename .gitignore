@@ -1,0 +1,12 @@
+node_modules/
+dist/
+.venv/
+__pycache__/
+*.pyc
+.taste-skill/
+.env
+build/
+release/
+.agents/
+.claude/
+skills-lock.json
